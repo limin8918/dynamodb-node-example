@@ -6,4 +6,4 @@
 
 ## Run in local
 * `npm install`
-* `node index.js`
+* `node src/table/createTable.js`

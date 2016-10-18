@@ -1,12 +1,11 @@
 var AWS = require('aws-sdk');
 
 AWS.config.update({
-    aws_access_key_id : "any-id",
-    aws_secret_access_key : "any-key",
-    region : "local"
+    region : "local",
+    endpoint: "http://localhost:8000"
 })
 
-var dynamodb = new AWS.DynamoDB({ endpoint: new AWS.Endpoint('http://localhost:8000') });
+var dynamodb = new AWS.DynamoDB();
 
 var params = {
     TableName : "Movies",
@@ -31,5 +30,3 @@ dynamodb.createTable(params, function(err, data) {
         console.log("Created table. Table description JSON:", JSON.stringify(data, null, 2));
     }
 });
-
-dynamodb.listTables(function (err, data) { console.log('listTables',err,data);});
