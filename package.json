@@ -1,0 +1,9 @@
+{
+	"name": "dynanodb",
+	"version": "0.0.1",
+	"author": "Li Min",
+	"description": "learning aws dynanodb",
+	"dependencies": {
+		"aws-sdk": "2.6.9"
+	}
+}
